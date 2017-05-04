@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<script type="text/javascript">
+		window.onload = function () {
+			var chart = new CanvasJS.Chart("chartContainer", {
+				title: {
+					text: "Economic Activities Graph"
+				},
+				
+				dataPointWidth:40,
+				data: [{
+					type: "column",
+					indexLabelLineThickness: 2,
+					dataPoints: [
+						  {y: 87,label: " f/vacant persons" },
+						  {y: 23.2,label:"m/vacant persons"},
+						  {y: 55.3,label: "both"},
+						  {y: 11.4,label: "worker famale"},
+						  {y: 72.8,label: "worker male"},
+						  {y: 41.8,label: "both"},
+
+						  
+					]
+				}]
+			});
+			chart.render();
+		}
+	</script>
+	<script src="js/jquery.canvasjs.min.js"></script>
+	<title>CanvasJS Example</title>
+</head>
+
+<body>
+	<div id="chartContainer" style="height: 400px; width: 100%; "></div>
+</body>
+
+</html>

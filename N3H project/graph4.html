@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script type="text/javascript">
+		window.onload = function () {
+			var chart = new CanvasJS.Chart("chartContainer", {
+				title: {
+					text: "active and deedless economicla population "
+				},
+				
+				dataPointWidth: 22,
+				data: [{
+					type: "column",
+					
+					dataPoints: [
+						  {y: 41.8,label: "Herat", indexLabel:"A" },
+						  {y: 55.3,label: "Herat", indexLabel:"D" },
+						  {y: 41.5,label:"Engil",indexLabel:"A"},
+						  {y: 55.1,label:"Engil",indexLabel:"D"},
+						  {y: 44.9,label: "Karukh",indexLabel:"A"},
+						  {y: 53.2,label: "Karukh",indexLabel:"D"},
+						  {y: 38.6,label: "Zandejan",indexLabel:"A"},
+						  {y: 55.2,label: "Zandejan",indexLabel:"D"},
+						  {y: 39.6,label: "Ghurian",indexLabel:"A" },
+						  {y: 54.5,label: "Ghurian",indexLabel:"D" },
+						  {y: 47.9,label: "Ubeh",indexLabel:"A"},
+						  {y: 51.2,label: "Ubeh",indexLabel:"D"},
+						  {y: 40.1, label: "Kohsan",indexLabel:"A" },
+						  {y: 55.5, label: "Kohsan",indexLabel:"D" },
+						 
+						
+
+						  
+					]
+				}]
+			});
+			chart.render();
+		}
+	</script>
+	<script src="js/jquery.canvasjs.min.js"></script>
+	<title>CanvasJS Example</title>
+</head>
+
+<body>
+	<div id="chartContainer" style="height: 400px; width: 100%; ;"></div>
+</body>
+
+</html>

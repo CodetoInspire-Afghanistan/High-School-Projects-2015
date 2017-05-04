@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="img/flag.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Registration form</title>  
+  <link rel="stylesheet" href="css/materialiaz.css">
+
+<style type="text/css">
+html,
+body {
+    height: 100%;
+}
+html {
+    display: table;
+    margin: auto;
+}
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+.margin {
+  margin: 0 !important;
+}
+</style>
+  
+</head>
+
+<body>
+
+
+  <div id="login-page" class="row">
+    <div class="col s12 z-depth-6 card-panel">
+      <form class="login-form" name="myform">
+        <div class="row">
+          <div class="input-field col s12 center">
+            <img src="img/n3h.png" height="130" width="160" alt="" class="responsive-img valign profile-image-login">
+            <p class="center login-form-text">SignUp Form</p
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <img src="img/user.png" class="prefix">
+            <input id="username" name="username" placeholder="Name" type="text" class="validate">
+          
+			<div  class="error_msg" id="name_error"></div>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+			<span class="prefix">&#9993;</span>
+			<input id="email" name="email" placeholder="Email"type="email" class="validate">
+           
+			<div class="error_msg" id="email_error"></div>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <img src="img/password.png" class="prefix">
+            <input id="password" name="pwd" type="password" placeholder="password" class="validate">
+           
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <img src="img/password.png" class="prefix">
+            <input name="pwd_confirm" id="password-again" placeholder="re-type" type="password">
+           
+			<div class="error_msg" id="pwd_error"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <a href="afghanComunity.html" class="btn waves-effect waves-light col s12">Register Now</a>
+          </div>
+          <div class="input-field col s12">
+            <p class="margin center medium-small sign-up">Already have an account? <a href="login.html">Login</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <center>
+<!-- Post Page - Responsive -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5104998679826243"
+     data-ad-slot="3470684978"></ins>
+
+</center>
+</body>
+<script>
+		// accessing input object
+		var username=document.myform.username;
+		var email=document.myform.email;
+		var pwd=document.myform.pwd;
+		var pwd_confirm=document.myform.pwd_confirm;
+
+	// accessing div elements
+		var name_error=document.getElementById("name_error");
+		var email_error=document.getElementById("email_error");
+		var pwd_error=document.getElementById("pwd_error");
+	//	adding event handler
+	username.addEventListener("blur", nameVerify, true);
+
+function nameVerify () {
+	// body...
+	if(username.value != ""){
+		username.style.border="";
+		name_error.textContent="";
+		return true;
+	}
+}
+function validate () {
+	// body...
+	if(username.value == ""){
+		name_error.textContent="Username is required!";
+		username.style.border="1px solid red";
+		username.focus();
+		return false;
+
+	}
+	if(email.value == ""){
+		email_error.textContent="Email is required!";
+		email.style.border="1px solid red";
+		email.focus();
+		return false;
+
+	}
+	if(pwd.value == ""){
+		pwd_error.textContent="Password is required!";
+		pwd.style.border="1px solid red";
+		pwd.focus();
+		return false;
+
+	}
+	if(pwd.value != pwd_confirm.value){
+		pwd_error.textContent="Does not match!";
+		pwd_confirm.style.border="1px solid  red";
+		pwd_confirm.focus();
+		return false;
+	}
+}
+</script>
+
+</html>

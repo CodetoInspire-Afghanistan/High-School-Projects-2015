@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+	<title>CanvasJS Example - jQuery Line Chart</title>
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/jquery.canvasjs.min.js"></script>
+	<script type="text/javascript">
+
+
+		$(function () {
+			//Better to construct options first and then pass it as a parameter
+			var options = {
+				title: {
+					text: "Agriculture Graph"
+				},
+				animationEnabled: true,
+				axisX: {
+					interval: 3
+				},
+				axisY: {
+					title: "Number of Messages"
+				},
+				legend: {
+					verticalAlign: "bottom",
+					horizontalAlign: "center"
+				},
+
+								data: [{
+					
+			
+					name: "sent",
+					showInLegend: true,
+					legendMarkerType: "square",
+					type: "area",
+					color: "rgba(0,75,141,0.7)",
+					markerSize: 0,
+					label: "",
+					dataPoints: [
+						{ y: 38, label: "2006" },
+						{ y: 38, label: "2007" },
+						{ y: 30, label: "2008" },
+						{ y: 32, label: "2009" },
+						{ y: 29, label: "2010" },
+						{ y: 31, label: "2011" },
+						{ y: 30, label: "2012" },
+						{ y: 27, label: "2013" },
+						{ y: 25, label: "2014" },
+						{ y: 25, label: "2015" },
+						
+						
+					]
+					
+				}
+				]
+			};
+			$("#chartContainer2").CanvasJSChart(options);
+		});
+
+
+	</script>
+</head>
+<body>
+
+	<div id="chartContainer2" style="width: 100%; height: 300px;display: inline-block;"></div><br />
+	
+	
+</body>
+</html>
