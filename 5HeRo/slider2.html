@@ -1,0 +1,510 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/index.css" rel="stylesheet">
+	      <link href="css/main.css" rel="stylesheet">
+     <link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<style type="text/css">
+ 
+body{
+  background:rgb(0,26,51);
+}
+
+
+#fre{
+height:200px;
+width: 200px ;
+border-radius: 12px;
+
+
+}
+#first{
+  height:200px;
+width: 200px ;
+border-radius: 12px;
+transform:rotate(90deg);
+}
+#bac{
+  background:rgba(154,148,423,0.4);
+  border-radius: 12px;
+  margin-top: 12px;
+ height: 110px;
+   padding: 10%;
+}
+#arezo{
+  background:rgba(146,56,148,0.2);
+  border-radius: 12px;
+  margin-top: 12px;
+   height: 110px;
+   padding: 10%;
+}
+#wahid{
+  background:rgba(138,66,73,0.3);
+  border-radius: 12px;
+  margin-top: 12px;
+   height: 110px;
+   padding: 10%;
+}
+#marqhoba{
+  background:rgba(131,73,147,0.4);
+  border-radius: 12px;
+  margin-top: 12px;
+   height: 110px;
+   padding: 10%;
+}
+#halima{
+  background:rgba(124,80,80,0.4);
+  border-radius: 12px;
+  margin-top: 12px;
+   height: 110px;
+   padding: 10%;
+}
+#back{
+  background:rgba(153,51,51,0.4);
+  border-radius: 12px;
+  margin-top: 12px;
+   height: 110px;
+   padding: 10%;
+   
+}
+.halim{
+  font-size: 12px;
+  color: white;
+  
+}
+#b{
+  background:rgba(153,531,51,0.3);
+  border-radius: 12px;
+  margin-top: 12px;
+  height: 110px;
+  padding: 10%;
+  color:blue;
+}
+.prev{
+
+    position: relative;
+    color:red;
+    animation-name: e;
+    animation-duration: 15s;
+  }
+  @keyframes e {
+    0%   {background-color: red;}
+    25%  {background-color: orange;}
+    50%  {background-color: pink;}
+  60%  {background-color:orange;}
+    75%  {background-color: yellow;}
+  80%  {background-color:#66ff66;}
+  90%  { background-color:#cc00ff;}
+    100% {background-color: #990099;}
+
+	#intro{
+	font-size:17px;
+	color:red;
+	}
+
+
+}
+.next{
+
+    position: relative;
+    color:red;
+    animation-name: e;
+    animation-duration: 15s;
+  }
+  @keyframes e {
+    0%   {background-color: red;}
+    25%  {background-color: orange;}
+    50%  {background-color: pink;}
+  60%  {background-color:orange;}
+    75%  {background-color: yellow;}
+  80%  {background-color:#66ff66;}
+  90%  { background-color:#cc00ff;}
+    100% {background-color: #990099;}
+
+
+
+}
+#anim {
+ animation-name: now;
+  -webkit-animation-duration: 29s;
+  animation-duration: 29s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+
+}
+
+@keyframes now{
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+
+}
+
+
+.container {
+  margin: 0 auto;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.item {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 200px;
+  height: 200px;
+  font-size: 5em;
+  text-align: center;
+  color: #FFF;
+  opacity: 0.95;
+  border-radius: 10px;
+}
+
+.a {
+  transform: rotateY(0deg) translateZ(250px);
+  background: #ed1c24;
+}
+.b {
+  transform: rotateY(60deg) translateZ(250px);
+  background: #0072bc;
+}
+.c {
+  transform: rotateY(120deg) translateZ(250px);
+  background: #39b54a;
+}
+.d {
+  transform: rotateY(180deg) translateZ(250px);
+  background: #f26522;
+}
+.e {
+  transform: rotateY(240deg) translateZ(250px);
+  background: #630460;
+} 
+.f {
+  transform: rotateY(300deg) translateZ(250px);
+  background: #8c6239;
+}
+
+.next, .prev {
+  color: #444;
+  position: absolute;
+  top: 100px;
+  padding: 1em 2em;
+  cursor: pointer;
+  background: #CCC;
+  border-radius: 5px;
+  border-top: 1px solid #FFF;
+  box-shadow: 0 5px 0 #999;
+  transition: box-shadow 0.1s, top 0.1s;
+}
+.next:hover, .prev:hover { color: #000; }
+.next:active, .prev:active {
+  top: 104px;
+  box-shadow: 0 1px 0 #999;
+}
+.next { right: 5em; }
+.prev { left: 5em; }
+	</style>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+var win = new Audio("get.mp3");
+    win.play();
+
+
+	var carousel = $(".carousel"),
+    currdeg  = 0;
+
+$(".next").on("click", { d: "n" }, rotate);
+$(".prev").on("click", { d: "p" }, rotate);
+
+function rotate(e){
+  if(e.data.d=="n"){
+    currdeg = currdeg - 60;
+  }
+  if(e.data.d=="p"){
+    currdeg = currdeg + 60;
+  }
+  carousel.css({
+    "-webkit-transform": "rotateY("+currdeg+"deg)",
+    "-moz-transform": "rotateY("+currdeg+"deg)",
+    "-o-transform": "rotateY("+currdeg+"deg)",
+    "transform": "rotateY("+currdeg+"deg)"
+  });
+
+} 
+
+	});
+ 
+
+	</script>
+</head>
+
+
+<body>
+
+  <!-- start navigation --> 
+     <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                          <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </button>
+                      </div>
+                      <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                         <li ><a href="index.html"><i class="glyphicon glyphicon-home"></i> Home </a></li>
+                        
+                          <li class="active"><a href="About.html"><i class="glyphicon glyphicon-info-sign"></i> About </a></li>
+
+                           <li><a href="Statistics.html"><i class="glyphicon glyphicon-signal"></i> Statistics </a></li>
+               
+  
+                          <li><a href="contact.html"><i class="glyphicon glyphicon-envelope"></i> Contact </a></li> 
+                     </ul>
+                  </div>
+              </div>
+          </div>
+		  <br>
+          <hr>
+   <!-- Close navigation -->
+   <div style="margin-top:5%;"></div>
+
+
+	<div class="container">
+  <div class="carousel" id="anim">
+    <div class="item a">
+    <img src="images/logo.jpg" id="first" ><p id="b" class="halim animated fadeInupBig"  
+    >
+
+      We Are Allways Successful.
+    
+    </p>
+    </div>
+
+    <div class="item b">
+      <img src="images/halima.jpg" id="fre"><p id="halima" class="halim " 
+    >practice the pause!!
+    when in doubt, when angry,when tired,when stressed,pause!</p>
+    </div>
+
+    <div class="item c">
+      <img src="images/arezo.jpg" id="fre"><p id="arezo" class="halim"
+    >the most successful people started from nothing.they didint wait for the opportunity to knovk but created the opportunity on their own......<br>
+    worked hard and made history.</p>
+    </div>
+
+    <div class="item d">
+      <img src="images/wahid.jpg" id="fre"><p id="marqhoba" class="halim"
+    >the best view,comes after the hardest climb.</p>
+
+    </div>
+
+    <div class="item e"><img src="images/my.jpg" id="fre"><p id="wahid" class="halim"
+    >A person who never made a mistake never tried anything now.</p></div>
+
+   <div class="item f">
+<img src="images/freshta.jpg" id="fre">
+<p id="back" class="halim">
+   the beautiful thing about life is that you can allways chang,grow and 
+      become better.
+    </p>
+    </div>
+   
+  </div>
+
+
+</div>
+ 
+ <br><br>
+<div class="next">next</div>
+
+<div class="prev">Prev</div>
+
+
+  <div class="container-fluid"> 
+  <div style="margin-top:19%;"></div>
+     <h2 id="some">The Team</h2>
+   <div class="portfolio-page" id="page-1"> 
+            <div class="col-md-3 col-md-offset-1">
+        <div class="portfolio-group">
+          <a class="portfolio-item" href="images/my.jpg">
+            <img src="images/my.jpg" alt="image 2">
+            <div class="detail">
+              <center><h3 style="color:brown">Marghoba Taimori</h3></center>
+              <p id="intro">I'm Marghoba Taimori one of the student of in CodeToInspire center and one year is that i learned coding in here and now i can make more webpage and design and i want to improve in this way.  </p>
+              <span class="btn">See</span>
+            </div>
+          </a>        
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="portfolio-group">
+          <a class="portfolio-item" href="images/freshta.jpg">
+            <img src="images/freshta.jpg" alt="image 3">
+            <div class="detail">
+              <center><h3 style="color:brown">Freshta Kimia</h3></center>
+              <p id="intro">Duis ac laoreet mi. Maecenas non lorem sed elit molestie tincidunt. Vestibulum tincidunt libero urna, ut dignissim purus accumsan nec.</p>
+              <span class="btn">See</span>
+            </div>
+          </a>        
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="portfolio-group">
+          <a class="portfolio-item" href="images/arezo.jpg">
+            <img src="images/arezo.jpg" alt="image 4">
+            <div class="detail">
+              <center><h3 style="color:brown">Arezo Akrami</h3></center>
+              <p id="intro">my name is arezo akrami I am very happy that Ican help the social with writing code
+and above one year ago I start learning code in the CTI</p>
+              <span class="btn">See</span>
+            </div>
+          </a>        
+        </div>
+    </div>
+    
+        <div class="col-md-4 col-md-offset-2">
+        <div class="portfolio-group">
+          <a class="portfolio-item" href="images/halima.jpg">
+            <img src="images/halima.jpg" alt="image 5">
+            <div class="detail">
+              <center><h3 style="color:brown">Halima Sori</h3></center>
+              <p id="intro">Duis ac laoreet mi. Vestibulum tincidunt libero urna, ut dignissim purus accumsan nec. Sed in molestie lectus. Curabitur non est neque.</p>
+              <span class="btn">See</span>
+            </div>
+          </a>        
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="portfolio-group">
+          <a class="portfolio-item" href="images/wahid.jpg">
+            <img src="images/wahid.jpg" alt="image 6">
+            <div class="detail">
+              <center><h3 style="color:brown">Wahida Azizi</h3></center>
+              <p id="intro">Sed in molestie lectus. Curabitur non est neque. Maecenas id luctus ligula. Mauris dignissim ante eu arcu ultricies, at sodales orci aliquet.</p>
+              <span class="btn">See</span>
+
+            </div>
+
+          </a>
+
+        </div> 
+         </div>
+       
+       <div class="col-md-4 col-md-offset-4">
+         <div class="portfolio-group">
+          <a class="portfolio-item" href="images/logo.jpg">
+            <img src="images/logo.jpg" alt="image 6">
+            <div class="detail">
+              <center><h3 style="color:brown">Information Project</h3></center>
+              <p id="intro">Sed in molestie lectus. Curabitur non est neque. Maecenas id luctus ligula. Mauris dignissim ante eu arcu ultricies, at sodales orci aliquet.</p>
+              <span class="btn">See</span>
+            </div>
+          </a>        
+        </div> 
+         </div>
+        </div>
+        </div>
+</div>
+
+
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+        <h2 class="heading" id="co">Contact Info.</h2> <br>
+        <div class="ph">
+          <p id="para"><span><i class="glyphicon glyphicon-earphone" id="icon"></i></span> Phone </p>
+          <h4 >0798300430</h4>
+ <br>
+        </div>
+        <div class="address">
+          <p id="para"><span><i class="glyphicon glyphicon-map-marker" id="icon"></i></span> Our Location</p>
+
+          <h4 >Afghanistan,Herat,30 metre street</h4>
+        </div>
+      </div>
+     
+      <div class="col-md-4 col-sm-4">
+        <br>
+      <div class="social-btn-container">
+              <span class="social-btn-box ">
+                 <a href="https://www.facebook.com/CodeToInspire" class="facebook-btn" title="Follow Us on Facebook" target="_blank">F</a>
+            </span>
+
+            <span class="social-btn-box">
+              <a href="https://twitter.com/CodeToInspire" class="twitter-btn" title="Follow Us on twitter" target="_blank">T</a>
+            </span>
+
+            <span class="social-btn-box">
+              <a href="https://www.linkedin.com/company/code-to-inspire" class="linkedin-btn" title="Follow Us on linkedin" target="_blank">in</a>
+            </span> 
+            
+            <span class="social-btn-box">
+              <a href="https://www.code-to-inspire" class="linkedin-btn" title="See Our Web" target="_blank">w</a>
+            </span> 
+     </div>
+             
+       </div>
+     
+      <div class="col-md-4 col-sm-4">
+        <h2 class="heading" id="co">Constancy</h2>
+        <br>
+          <p id="para"> Subjective constancy is the perception of an object or quality as constant even thought our sensation of the object changes </p>
+      </div>
+    </div> 
+  </div>
+</footer>
+
+
+
+
+      
+          <br><br>
+
+
+
+
+ <script type="text/javascript" src="js/js1/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="js/js1/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/js1/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/js1/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/js1/modernizr.2.5.3.min.js"></script>
+  <script type="text/javascript" src="js/js1/jquery.magnific-popup.min.js"></script> 
+  <script type="text/javascript" src="js/js1/templatemo_script.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('.pagination li').click(changePage);
+      $('.portfolio-item').magnificPopup({ 
+        type: 'image',
+        gallery:{
+          enabled:true
+        }
+      });
+    });
+  </script>
+
+
+</body>
+</html>

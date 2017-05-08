@@ -1,0 +1,38 @@
+.box{
+	margin:5% 1%;
+	width:150px;
+	height:150px;
+	border:5px solid white;
+	box-shadow:1px 1px 5px gray;
+	float:left;
+	overflow:hidden;
+}
+.box img{
+	width:150px;
+	height:150px;
+}
+.caption{
+	
+	background:rgba(0,0,0,0.5);
+	display:block;
+	position:absolute;
+	color:transparent;
+	
+}
+
+
+#box1 .caption,#box4 .caption{
+	width:150px;
+	height:40px;
+	top:80px;
+	transition:top 1s, height 0.5s, color 1s;
+}
+#box1:hover .caption, #box4:hover .caption{
+	top:130px;
+	height:100px;
+	color:white;
+}
+
+
+
+
