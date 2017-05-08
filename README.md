@@ -1,1 +1,1 @@
-# High-School-Projects
+# High_School_Projects_Hackathon_2017(Second_Year)
